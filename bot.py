@@ -66,48 +66,6 @@ class Bot():
         else:
             return min_choice
 
-        # if player == self.turn:
-        #     best = [-1, -1, -inf]
-        # else:
-        #     best = [-1, -1, +inf] 
-
-        # if player == 'X':
-        #     complement = 'O'
-        # else:
-        #     complement = 'X'
-
-        # if depth == 0 or board.game_over:
-        #     if board.is_winner(self.turn):
-        #         score = 1
-        #         return [-1, -1, 1]
-        #     elif board.is_winner(self.complement):
-        #         score = -1
-        #         return [-1, -1, -1]
-        #     elif len(board.possible_moves()) == 0:
-        #         score = 0
-        #         return [-1, -1, 0]
-
-        # for cell in board.possible_moves():
-        #     x, y = cell[0], cell[1]
-        #     # board.grid[x][y] = player
-        #     # board.moves.append([x, y])
-        #     newboard = copy.deepcopy(board)
-        #     newboard.make_move(x, y, player)
-        #     score = self.minimax(newboard, complement, depth - 1)
-        #     # board.grid[x][y] = '-'
-        #     # board.moves.remove([x, y])
-        #     score[0], score[1] = x, y
-
-        #     if player == self.turn:
-        #         if score[2] > best[2]:
-        #             best = score  # max value
-        #     else:
-        #         if score[2] < best[2]:
-        #             best = score  # min value
-
-        # return best
-
-
     def select_move(self, board):
         depth = len(board.possible_moves()) 
         if depth == 0 or board.game_over():
